@@ -1,0 +1,385 @@
+
+{
+    "files.autoSave": "onFocusChange",
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\cmd.exe",
+    "hediet.vscode-drawio.resizeImages": null,
+
+    // Letex Plugin Settings.
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.showContextMenu": true,
+    "latex-workshop.intellisense.package.enabled": true,
+    "latex-workshop.message.error.show": false,
+    "latex-workshop.message.warning.show": false,
+    "latex-workshop.latex.tools": [
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOCFILE%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "XeLaTeX",
+            "tools": [
+                "xelatex"
+            ]
+        },
+        {
+            "name": "PDFLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "BibTeX",
+            "tools": [
+                "bibtex"
+            ]
+        },
+        {
+            "name": "LaTeXmk",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "xelatex -> bibtex -> xelatex*2",
+            "tools": [
+                "xelatex",
+                "bibtex",
+                "xelatex",
+                "xelatex"
+            ]
+        },
+        {
+            "name": "pdflatex -> bibtex -> pdflatex*2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+    ],
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.ist",
+        "*.fls",
+        "*.log",
+        "*.fdb_latexmk"
+    ],
+    "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "latex-workshop.view.pdf.internal.synctex.keybinding": "double-click",
+    "cmake.configureOnOpen": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    // The Python ruff settings.
+    "editor.cursorSmoothCaretAnimation": "on",
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit",
+            "source.fixAll.ruff": "explicit",
+        },
+        "diffEditor.ignoreTrimWhitespace": false
+    },
+    "notebook.formatOnSave.enabled": true,
+    "notebook.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit",
+    },
+    "editor.fontLigatures": true,
+    "ruff.nativeServer": "on",
+    "ruff.lineLength": 120,
+    "ruff.lint.select": ["UP", "E", "F", "W"],
+    "ruff.lint.ignore": ["F401"],
+    // "ruff.format.args": [
+        // "--quote-style=single"
+    // ],
+
+    // Add the workbench theme settings.
+    // "editor.fontFamily": "JetBrains Mono Regular", "Maple Mono SC NF",
+    "editor.fontFamily": "Maple Mono SC NF",
+    "editor.fontSize": 14.5,
+    "workbench.iconTheme": "moxer-icons",
+    "workbench.colorTheme": "Material Theme Darker",
+    "workbench.colorCustomizations": {
+        "statusBarItem.remoteBackground": "#81D8D0",
+        "statusBar.background": "#ffc880",
+        "statusBar.foreground": "#000000",
+        "statusBar.debuggingBackground": "#ff8851",
+        "statusBar.noFolderForeground": "#ffffff",
+        "sideBar.border": "#222623",
+        "panel.border": "#222623",
+        "statusBar.noFolderBackground": "#005f87",
+        "statusBar.debuggingForeground": "#ffffff"
+    },
+    "editor.tokenColorCustomizations": {
+        "[Material Theme]": {
+            "comments": "#78918a",
+            "strings": "#f0f0f0",
+            "variables": "#f0f0f0",
+        },
+        "[Material Theme Darker]": {
+            "comments": "#78918a",
+            "strings": "#dadada",
+            "variables": "#dadada",
+        },
+        "[Material Theme Darker High Contrast]": {
+            "comments": "#78918a",
+            "strings": "#dadada",
+            "variables": "#dadada",
+        },
+    },
+    "editor.semanticTokenColorCustomizations": {
+        // Follow the Official Settings: https://github.com/microsoft/vscode/wiki/Semantic-Highlighting-Overview
+        "[Material Theme Darker]": {
+            "enabled": true,
+            "rules": {
+                "parameter": "#dcdcdc",
+            },
+        },
+        "[Material Theme Darker High Contrast]": {
+            "enabled": true,
+            "rules": {
+                "parameter": "#dcdcdc",
+            },
+        },
+    },
+    "editor.lineHeight": 1.5,
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "Lingma.localMachineModel": true,
+    // Add the gitblame settings.
+    "gitblame.inlineMessageEnabled": true,
+    "gitblame.infoMessageFormat": "${author.name}, (${time.ago}) · ${commit.summary}",
+
+    "remote.SSH.defaultExtensions": [
+        "gruntfuggly.todo-tree",
+        "wayou.vscode-todo-highlight",
+        "rooveterinaryinc.roo-cline",
+        "alibaba-cloud.tongyi-lingma",
+        "ms-azuretools.vscode-docker",
+        "mhutchie.git-graph",
+        "waderyan.gitblame",
+        "charliermarsh.ruff",
+        // "streetsidesoftware.code-spell-checker",
+    ],
+    "vscode_custom_css.imports": [
+        "file:///c:/Users/98309.BINGONER/.vscode/extensions/brandonkirbyson.vscode-animations-2.0.4/dist/updateHandler.js"
+    ],
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "chat.commandCenter.enabled": false,
+
+    // Vim Plugin Settings.
+    // Follow the following urls to set vim:
+    //     - https://www.cnblogs.com/YunyaSir/p/15522565.html
+    //     - 
+    "editor.lineNumbers": "relative",
+    "editor.parameterHints.enabled": false,
+    "editor.scrollBeyondLastLine": false,
+    // "vim.statusBarColorControl": true,
+    // "vim.statusBarColors.normal": [
+    //     "#005f5f",
+    //     "#ffffff"
+    // ],
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.easymotion": true,
+    "vim.useCtrlKeys": true,
+    "vim.incsearch": true,
+    "vim.hlsearch": true,
+    "vim.foldfix": true,
+    "vim.handleKeys": {
+        "<C-d>": true,
+        // "<S-k>": true,
+        "<S-j>": true,
+    },
+    "vim.normalModeKeyBindings": [
+        // The Basic settings.
+
+        {"before": ["leader", "g", "d"], "commands": ["editor.action.revealDefinition"]},
+        {"before": ["leader", "g", "r"], "commands": ["editor.action.goToReferences"]},
+        {"before": ["leader", "g", "g"], "commands": ["workbench.view.scm"]},
+
+        // The TODO Settings.
+        {"before": ["leader", "s", "t"], "commands": ["workbench.view.extension.todo-tree-container"]},
+        {"before": ["[", "t"], "commands": ["todo-tree.goToNext"]},
+
+        {"before": ["leader", "s", "G"], "commands": ["workbench.action.findInFiles"]},
+        {"before": ["leader", "s", "g"], "commands": ["workbench.action.quickTextSearch"]},
+        // {"before": ["leader", "s", "g"], "commands": ["search.action.focusSearchList"]},
+
+        // Windows settings.
+        {"before": ["leader", "-"], "commands": [":split"]},
+        {"before": ["leader", "w", "v"], "commands": [":split"]},
+        {"before": ["leader", "|"], "commands": [":vsplit"]},
+        {"before": ["leader", "w", "s"], "commands": [":vsplit"]},
+
+
+
+        // panes
+        {"before": ["<C-h>"], "commands": ["workbench.action.focusLeftGroup"]},
+        {"before": ["<C-j>"], "commands": ["workbench.action.focusBelowGroup"]},
+        {"before": ["<C-k>"], "commands": ["workbench.action.focusAboveGroup"]},
+        {"before": ["<C-l>"], "commands": ["workbench.action.focusRightGroup"]},
+
+        // File Tree
+        {"before": ["leader", "e"], "commands": ["workbench.view.explorer"]},
+        {"before": ["leader", ","], "commands": ["workbench.action.showAllEditors"]},
+        {"before": ["leader", "leader"], "commands": ["workbench.action.quickOpen"]},
+
+        // The code kerbing.
+        {"before": ["<S-k>"], "commands": ["editor.action.showHover"]},
+        {"before": ["<C-n>"], "commands": ["editor.action.addSelectionToNextFindMatch"]},
+
+        //https://baike.baidu.com/item/%E9%A9%BC%E5%B3%B0%E5%91%BD%E5%90%8D%E6%B3%95/7560610
+
+        // The debug settings, follow the https://www.lazyvim.org/keymaps.
+        // Break Points.
+        {"before": ["leader", "d", "b"], "commands": ["editor.debug.action.toggleBreakpoint"]},
+        {"before": ["leader", "d", "B"], "commands": ["editor.debug.action.conditionalBreakpoint"]},
+        // Session
+        {"before": ["leader", "d", "s"], "commands": ["workbench.action.debug.selectDebugSession"]},
+        // In Session: Ignore the command down, up, Widgets,etc.
+        {"before": ["leader", "d", "c"], "commands": ["workbench.action.debug.continue"]},
+        {"before": ["leader", "d", "C"], "commands": ["editor.debug.action.runToCursor"]},
+        {"before": ["leader", "d", "i"], "commands": ["workbench.action.debug.stepInto"]},
+        {"before": ["leader", "d", "l"], "commands": ["testing.debugLastRun"]},
+        {"before": ["leader", "d", "o"], "commands": ["workbench.action.debug.stepOut"]},
+        {"before": ["leader", "d", "O"], "commands": ["workbench.action.debug.stepOver"]},
+        {"before": ["leader", "d", "P"], "commands": ["workbench.action.debug.pause"]},
+        {"before": ["leader", "d", "R"], "commands": ["workbench.action.debug.restart"]},
+        {"before": ["leader", "d", "q"], "commands": ["workbench.action.debug.stop"]},
+        {"before": ["leader", "d", "r"], "commands": ["workbench.debug.action.toggleRepl"]},
+        // Other tools
+        {"before": ["leader", "d", "v"], "commands": ["workbench.action.debug.focusVariablesView"]},
+        {"before": ["leader", "d", "k"], "commands": ["workbench.action.debug.focusCallStackView"]},
+
+
+
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // The Line commands.
+        {"before": ["H"], "after": ["^"]},
+        // {"before": ["<S-l>"], "after": ["$"]},
+        {"before": ["L"], "after": ["$"]},
+        {"before": ["c", "L"], "after": ["c", "$"]},    // This is the bug of VscodeVim.
+        {"before": ["c", "H"], "after": ["c", "$"]},
+        {"before": ["d", "h"], "after": ["d", "^"]},    // This is the bug of VscodeVim.
+        {"before": ["d", "L"], "after": ["d", "$"]},    // This is the bug of VscodeVim.
+        {"before": ["y", "H"], "after": ["y", "^"]},    // This is the bug of VscodeVim.
+        {"before": ["y", "L"], "after": ["y", "$"]},    // This is the bug of VscodeVim.
+
+        // The file exit settings.
+        {"before": ["[", "b"], "commands": [":bprevious"]},
+        {"before": ["]", "b"], "commands": [":bnext"]},
+        {"before": ["leader", "w", "q"], "commands": ["workbench.action.files.save", "workbench.action.closeEditorsInGroup"]},
+        {"before": ["leader", "b", "d"], "commands": ["workbench.action.closeActiveEditor"]},
+
+        // The Code commands.
+        {"before": ["leader", "c", "c"], "commands": ["editor.action.commentLine"]},
+        {"before": ["leader", "c", "r"], "commands": ["editor.action.rename"]},
+        {"before": ["leader", "c", "a"], "commands": ["editor.action.codeAction"]},
+        {"before": ["leader", "c", "s"], "commands": ["workbench.action.gotoSymbol"]},
+
+        {"before": ["g", "c", "c"], "commands": ["editor.action.commentLine"]},
+
+        // Map the easymotion keybindings to LazyVim.
+        {"before": ["s"], "after": ["leader", "leader", "s"]},
+    ],
+    "vim.insertModeKeyBindings": [
+        {"before": ["j", "j"], "after": ["<Esc>"]},
+        {"before": ["j", "k"], "after": ["<Esc>"]},
+    ],
+    "vim.visualModeKeyBindings": [
+        {"before": ["g", "c"], "commands": ["editor.action.commentLine"]},
+        {"before": ["<C-n>"], "commands": ["editor.action.addSelectionToNextFindMatch"]},
+        {"before": [">"], "commands": ["editor.action.indentLines"]},
+        {"before": ["<"], "commands": ["editor.action.outdentLines"]},
+        {"before": ["<S-k>"], "commands": ["editor.action.moveLinesUpAction"]},
+        {"before": ["<S-j>"], "commands": ["editor.action.moveLinesDownAction"]},
+    ],
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    },
+    // TODO Plugin Settings
+    "todo-tree.regex.regex": "(//|#|<!--|;|/\\*|^|^\\s*(-|\\d+.))\\s*($TAGS)",
+    "todo-tree.general.statusBar": "total",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]"
+    ],
+    "todo-tree.general.tagGroups": {
+        "BUG":["BUG", "bug", "BUGs",],
+        "FIXME": ["FIXME", "FIX", "fix", "FIXIT",],
+        "TODO":["TODO", "todo", "TODOLIST",],
+        "HACK": ["HACK",],
+        "[x]": ["[x]", "Completed",],
+        "XXX":["XXX"],
+        "[ ]": ["[ ]"],
+    },
+    "roo-cline.allowedCommands": [
+        "npm test",
+        "npm install",
+        "tsc",
+        "git log",
+        "git diff",
+        "git show"
+    ]
+}

@@ -1,0 +1,137 @@
+// The Vscode Vim keybinds.
+[
+    // Vim KeyBindings
+    // https://code.visualstudio.com/api/references/when-clause-contexts
+    {
+        "key": "space s t",
+        // The SideBar can be change with view.xxx;
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "view.todo-tree-view.visible && !editorFocus"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "filesExplorerFocus"
+    },
+    // Search items.
+    {
+        // "key": "space s g",
+        "key": "escape escape",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "searchViewletFocus && !editorFocus"
+    },
+    {
+        // "key": "space s g",
+        "key": "enter",
+        "command": "search.action.focusSearchList",
+        "when": "searchViewletFocus && !editorFocus"
+    },
+
+    {
+        "key": "escape escape",
+        "command": "workbench.action.toggleSidebarVisibility",
+        // "when": "workbench.scm.active && !editorFocus"
+        "when": "view.workbench.scm.visible && !editorFocus"
+    },
+    // File commands.
+    {
+        "key": "r",
+        "command": "renameFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "y",
+        "command": "filesExplorer.copy",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "p",
+        "command": "filesExplorer.paste",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "x",
+        "command": "filesExplorer.cut",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "d",
+        "command": "deleteFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "A",
+        "command": "explorer.newFolder",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "enter",
+        "command": "explorer.openAndPassFocus",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "s",
+        "command": "explorer.openToSide",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly"
+    },
+    {
+        "key": "shift s",
+        "command": "runCommands",
+        "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsRoot && !explorerResourceReadonly",
+        "args": {
+            "commands": [
+                "workbench.action.splitEditorDown",
+                "explorer.openAndPassFocus",
+                "workbench.action.closeOtherEditors"
+            ]
+        }
+    },
+
+    //panels
+    {
+        "key": "ctrl+/", 
+        "command": "workbench.action.togglePanel",
+    },
+    {
+        "key": "ctrl+shift+a", 
+        "command": "workbench.action.terminal.focusNext", 
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+b", 
+        "command": "workbench.action.terminal.focusPrevious", 
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+n", 
+        "command": "workbench.action.terminal.new", 
+        "when": "terminalFocus"
+    },
+
+    // Simulate the neovim to switch panel commands.
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.focusPanel",
+        "when": "explorerViewletFocus && panelVisible",
+    },
+    {
+        "key": "ctrl+shift+h",    // 当处在下面版时切换至左侧栏
+        "command": "workbench.action.focusSideBar",
+        "when": "sideBarVisible && (panelFocus || terminalFocus)",
+    },
+    {
+        "key": "ctrl+k",    // 当处在下面版时切换至编辑器
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "panelFocus",
+    },
+    {
+        "key": "ctrl+l",    // 当处在左侧栏时切换回工作区
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "filesExplorerFocus",
+    },
+]
